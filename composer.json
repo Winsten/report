@@ -1,7 +1,15 @@
 {
   "name": "fireguard/report",
   "description": "Report management package in PHP that aims to help you export information in a variety of formats",
-  "keywords": [ "php", "report", "relatório", "pdf", "html", "image", "laravel"],
+  "keywords": [
+    "php",
+    "report",
+    "relatório",
+    "pdf",
+    "html",
+    "image",
+    "laravel"
+  ],
   "license": "MIT",
   "authors": [
     {
@@ -11,7 +19,7 @@
   ],
   "require": {
     "php": ">=5.5.9",
-    "jakoch/phantomjs-installer": "2.1.1-p06",
+    "jakoch/phantomjs-installer": "^3",
     "symfony/process": ">=2.7",
     "symfony/http-foundation": ">=2.7"
   },

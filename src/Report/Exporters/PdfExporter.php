@@ -1,4 +1,5 @@
 <?php
+
 namespace Fireguard\Report\Exporters;
 
 use Fireguard\Report\Contracts\ExporterInterface;
@@ -8,11 +9,11 @@ use PhantomInstaller\PhantomBinary;
 class PdfExporter extends AbstractPhantomExporter  implements ExporterInterface
 {
     /**
-     * @var string ['A4', 'A3', 'Letter']
+     * @var string ['A4', 'A3','A5', 'Letter','Legal','Tabloid']
      */
     protected $format = 'A4';
 
-    protected $validFormats = ['A4', 'A3', 'Letter'];
+    protected $validFormats = ['A4', 'A3', 'A5', 'Letter', 'Legal', 'Tabloid'];
 
     /**
      * @var string ['landscape', 'portrait']
@@ -27,7 +28,7 @@ class PdfExporter extends AbstractPhantomExporter  implements ExporterInterface
     {
         $this->extension = '.pdf';
         $defaultConfig = $this->getDefaultConfiguration();
-        $this->config = array_replace_recursive($defaultConfig['pdf'] , $config);
+        $this->config = array_replace_recursive($defaultConfig['pdf'], $config);
 
         $this->setConfigDefaultOptions($this->config['phantom']);
 
